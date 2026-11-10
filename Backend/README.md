@@ -11,12 +11,12 @@ Projet-AWD/
 │   ├── discovery-service/
 │   ├── auth-user-service/
 │   ├── schedule-service/          # Microservice commun
-│   ├── consultation-service/
-│   ├── course-eval-service/
-│   ├── game-service/
-│   ├── event-service/
-│   ├── communication-service/
-│   └── resource-service/
+│   ├── consultation-service/ (molka)
+│   ├── course-eval-service/ (dora)
+│   ├── game-service/ (rouem)
+│   ├── event-service/ (fares)
+│   ├── communication-service/ (zakaria)
+│   └── resource-service/ (ahmed)
 ```
 
 ## 🛠️ Détail des Composants

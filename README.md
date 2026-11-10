@@ -49,6 +49,13 @@
             │  Resource Serv.  │
             │   (DB: MongoDB)  │
             └──────────────────┘
+                       │
+                       ▼
+            ┌──────────────────┐
+            │ Communication    │
+            │    Service       │
+            │   (DB: MongoDB)  │
+            └──────────────────┘
 ```
 
 ## Backend Services
@@ -66,3 +73,4 @@ The backend is a microservices architecture located in the `Backend/` directory:
 | event-service | PostgreSQL |
 | game-service | MongoDB |
 | resource-service | MongoDB |
+| communication-service | MongoDB |

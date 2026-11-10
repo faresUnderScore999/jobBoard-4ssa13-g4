@@ -15,6 +15,7 @@ Projet-AWD/
 │   ├── course-eval-service/
 │   ├── game-service/
 │   ├── event-service/
+│   ├── communication-service/
 │   └── resource-service/
 ```
 
@@ -52,3 +53,8 @@ Gestion des événements et notifications.
 
 ### resource-service/
 Gestion des ressources et documents partagés.
+
+### communication-service/
+Bibliothèque de pictogrammes pour la communication des enfants autistes.
+
+Responsabilités : bibliothèque de pictogrammes par catégorie (besoins, émotions, nourriture, activités, lieux) ; tableaux personnalisables par enfant gérés par les parents et éducateurs ; construction de demandes ou de choix par l'enfant en tapant sur des pictogrammes (ex. « Je veux + eau ») ; historique des requêtes de l'enfant visible aux parents et éducateurs ; pictogrammes favoris et fréquemment utilisés.

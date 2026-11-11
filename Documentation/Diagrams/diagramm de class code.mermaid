@@ -1,0 +1,262 @@
+classDiagram
+
+    %% ==========================================
+    %% MICROSERVICE : SCHEDULE (MS7)
+    %% ==========================================
+    namespace ScheduleService_MS7 {
+        class Schedule {
+            +Long id
+            +String childId
+            +LocalDate weekStart
+        }
+        class Activity {
+            +Long id
+            +String title
+            +String type
+            +LocalDateTime startAt
+            +int durationMin
+            +String status
+        }
+        class Reminder {
+            +Long id
+            +Long activityId
+            +LocalDateTime sendAt
+            +boolean sent
+        }
+    }
+    Schedule "1" --> "*" Activity : Has
+    Activity "1" --> "0..1" Reminder : Associates With
+
+    %% ==========================================
+    %% MICROSERVICE : CONSULTATION (MS5)
+    %% ==========================================
+    namespace ConsultationService_MS5 {
+        class Appointment {
+            +UUID id
+            +String parentId
+            +String childId
+            +LocalDateTime startAt
+            +LocalDateTime endAt
+            +String mode
+            +String status
+            +String reason
+        }
+        class Specialist {
+            +UUID id
+            +String keycloakUserId
+            +String firstName
+            +String lastName
+            +String specialty
+            +String mode
+        }
+        class Availability {
+            +UUID id
+            +DayOfWeek dayOfWeek
+            +LocalTime startTime
+            +LocalTime endTime
+            +int slotDurationMin
+        }
+        class FollowUpNote {
+            +UUID id
+            +String authorId
+            +String content
+            +boolean visibleToParent
+        }
+    }
+    Specialist "1" --> "0..*" Appointment : gère
+    Specialist "1" --> "0..*" Availability : dispose
+    Appointment "1" --> "0..*" FollowUpNote : notes
+
+    %% ==========================================
+    %% MICROSERVICE : COURSE (MS2)
+    %% ==========================================
+    namespace CourseService_MS2 {
+        class Course {
+            -Long id
+            -String title
+            -String category
+            -String level
+            -int ageMin
+            -int ageMax
+            -List~Long~ resourceIds
+        }
+        class CourseAssignment {
+            -Long childId
+            -String status
+            -int progress
+        }
+        class Evaluation {
+            -Long id
+            -String title
+            -String level
+        }
+        class Question {
+            -String text
+            -List~String~ options
+            -String correctAnswer
+        }
+        class EvaluationResult {
+            -Long childId
+            -int score
+            -LocalDateTime date
+        }
+        class Competence {
+            -Long childId
+            -String name
+            -int mastery
+        }
+    }
+    Course "1" --> "0..*" CourseAssignment
+    Course "1" --> "0..*" Evaluation
+    Evaluation "1" --> "1..*" Question
+    Evaluation "1" --> "0..*" EvaluationResult
+    EvaluationResult "1" --> "1" Competence : met à jour
+
+    %% ==========================================
+    %% MICROSERVICE : GAME (MS6)
+    %% ==========================================
+    namespace GameService_MS6 {
+        class Game {
+            +Long id
+            +String title
+            +String category
+            +int minLevel
+        }
+        class Level {
+            +Long id
+            +Long gameId
+            +int difficulty
+        }
+        class Session {
+            +Long id
+            +String childId
+            +int score
+            +LocalDateTime playedAt
+        }
+        class Reward {
+            +Long id
+            +String label
+            +int threshold
+        }
+    }
+    Game "1" --> "*" Level : Has
+    Game "1" --> "*" Session : Has
+    Session "*" --> "0..1" Reward : Rewards
+
+    %% ==========================================
+    %% MICROSERVICE : COMMUNICATION (MS4)
+    %% ==========================================
+    namespace CommunicationService_MS4 {
+        class Board {
+            +Long id
+            +String childId
+            +String name
+        }
+        class Pictogram {
+            +Long id
+            +String label
+            +String category
+            +String imageRef
+        }
+        class BoardItem {
+            +Long id
+            +Long boardId
+            +Long pictogramId
+            +int position
+        }
+        class ChildRequest {
+            +Long id
+            +String childId
+            +String text
+            +LocalDateTime sentAt
+        }
+    }
+    Board "1" --> "0..*" BoardItem : Contains
+    BoardItem "0..*" --> "1" Pictogram : References
+    Board "1" --> "0..*" ChildRequest : Generated for
+
+    %% ==========================================
+    %% MICROSERVICE : EVENT (MS1)
+    %% ==========================================
+    namespace EventService_MS1 {
+        class EventType {
+            +Long id
+            +String name
+        }
+        class Event {
+            +Long id
+            +String title
+            +LocalDateTime startAt
+            +String location
+            +int capacity
+        }
+        class Registration {
+            +Long id
+            +Long eventId
+            +String userId
+            +String status
+        }
+    }
+    EventType "1" --> "0..*" Event : Categorized As
+    Event "1" --> "0..*" Registration : Has
+
+    %% ==========================================
+    %% MICROSERVICE : RESOURCE (MS3)
+    %% ==========================================
+    namespace ResourceService_MS3 {
+        class Resource {
+            -String id
+            -String title
+            -String description
+            -String type
+            -String level
+            -int ageMin
+            -int ageMax
+        }
+        class Category {
+            -String id
+            -String name
+            -String description
+        }
+        class ResourceFile {
+            -String id
+            -String fileName
+            -String url
+            -String type
+            -long size
+        }
+        class Tag {
+            -String id
+            -String name
+        }
+        class Consultation {
+            -String id
+            -String childId
+            -String dateConsultation
+            -int duration
+        }
+    }
+    Category "1" --> "0..*" Resource : contient
+    Resource "1" --> "0..*" ResourceFile : possède
+    Resource "0..*" <--> "0..*" Tag : est taguée par
+    Resource "1" --> "0..*" Consultation : est consultée
+
+    %% ==========================================
+    %% RELATIONS INTER-MICROSERVICES (Liaisons)
+    %% ==========================================
+    
+    %% Appels synchrones (FeignClient / API)
+    CourseService_MS2.Course ..> ResourceService_MS3.Resource : "resourceIds (Feign)"
+    ConsultationService_MS5.Appointment ..> ScheduleService_MS7.Schedule : "checkConflicts (Feign)"
+    
+    %% Événements asynchrones (RabbitMQ)
+    ConsultationService_MS5.Appointment ..> CourseService_MS2.EvaluationResult : "ConsultationEvent (RabbitMQ)"
+
+    %% ==========================================
+    %% NOTES (Découplage)
+    %% ==========================================
+    note for ScheduleService_MS7.Schedule "childId = Keycloak ID (Pas de FK)"
+    note for GameService_MS6.Session "childId = Keycloak ID (Pas de FK)"
+    note for CommunicationService_MS4.Board "childId = Keycloak ID (Pas de FK)"
+    note for CourseService_MS2.CourseAssignment "childId = Keycloak ID (Pas de FK)"
+    note for ConsultationService_MS5.Appointment "parentId / childId = Keycloak IDs"

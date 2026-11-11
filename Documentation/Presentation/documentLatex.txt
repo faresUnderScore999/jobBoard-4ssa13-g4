@@ -1,0 +1,310 @@
+\documentclass[12pt,a4paper]{report}
+
+% --- Packages nécessaires ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+
+% --- Configuration de la page ---
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Document Technique - AutismCare},
+}
+
+% --- Configuration du code source ---
+\lstset{
+    backgroundcolor=\color{gray!10},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    captionpos=b,
+    commentstyle=\color{green!60!black},
+    keywordstyle=\color{blue},
+    stringstyle=\color{red!70!black},
+    frame=single
+}
+
+% --- Page de garde ---
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    % --- LOGO DESACTIVE POUR EVITER L'ERREUR ---
+    % \includegraphics[width=0.4\textwidth]{logo_esprit.png} 
+    \vspace{2cm}
+    {\Large \textbf{ESPRIT}\par}
+    {\large École Supérieure Privée d'Ingénierie et de Technologies\par}
+    \vspace{2cm}
+    {\Large \textbf{Projet AWD - Validation Intermédiaire (Séance 4)}\par}
+    \vspace{1.5cm}
+    {\huge \textbf{AutismCare}\par}
+    \vspace{0.5cm}
+    {\Large \textbf{Document Technique}\par}
+    \vspace{2cm}
+    
+    \begin{flushleft}
+    \large
+    \textbf{Problématique :} \\
+    Comment aider l'enfant autiste à communiquer, apprendre et structurer son quotidien, et offrir aux adultes un outil unique pour organiser et suivre l'accompagnement ?
+    \end{flushleft}
+    
+    \vfill
+    
+    \begin{flushleft}
+    \large
+    \textbf{Classe / Groupe :} 4ssa13 \\
+    \textbf{Équipe :} \\
+    \begin{itemize}
+        \item Toute l’équipe - Responsable du \textit{schedule-service} (commun)
+        \item Molka Sadkaoui - Responsable du \textit{consultation-service}
+        \item Dorra Serige - Responsable du \textit{course-eval-service}
+        \item Rouem znidi - Responsable du \textit{game-service}
+        \item Fares Ben Ali - Responsable du \textit{event-service}
+        \item Zakaria Boukardougha - Responsable du \textit{communication-service}
+        \item Ahmed laribi - Responsable du \textit{resource-service}
+    \end{itemize}
+    \end{flushleft}
+    
+    \vspace{1cm}
+    \centering
+    \today
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ==========================================
+% 1. CONTEXTE ET PROBLÉMATIQUE
+% ==========================================
+\chapter{Contexte et Problématique}
+
+\section{Présentation du projet}
+AutismCare est une plateforme dédiée à l'accompagnement des enfants atteints de troubles du spectre de l'autisme (TSA). Elle vise à centraliser les outils d'aide à la communication, d'apprentissage, et d'organisation du quotidien.
+
+\section{Problématique}
+Comment aider l'enfant autiste à communiquer, apprendre et structurer son quotidien, et offrir aux adultes (parents, éducateurs, spécialistes) un outil unique pour organiser et suivre l'accompagnement ?
+
+\section{Acteurs du système}
+\begin{itemize}
+    \item \textbf{Enfant} : Utilise l'application pour communiquer (pictogrammes), jouer et suivre son emploi du temps.
+    \item \textbf{Parent} : Gère le quotidien, suit les progrès et interagit avec les spécialistes.
+    \item \textbf{Éducateur / Spécialiste} : Crée des contenus, gère les disponibilités et les rendez-vous, ajoute des notes de suivi.
+    \item \textbf{Administrateur} : Gère la plateforme, les comptes et les ressources globales.
+\end{itemize}
+
+% ==========================================
+% 2. FONCTIONNALITÉS PRINCIPALES
+% ==========================================
+\chapter{Fonctionnalités Principales}
+La plateforme est divisée en huit grands blocs fonctionnels, correspondant à un microservice ou une brique de la plateforme :
+
+\begin{itemize}
+    \item \textbf{Comptes et rôles} : Inscription, connexion (Keycloak), gestion des rôles et droits d'accès.
+    \item \textbf{Emploi du temps} : Routine visuelle, rappels, activités faites ou non.
+    \item \textbf{Consultations} : Disponibilités des spécialistes, prise de rendez-vous, statuts, notes de suivi.
+    \item \textbf{Cours et évaluations} : Cours par catégorie, exercices, résultats, niveau adapté.
+    \item \textbf{Jeux éducatifs} : Émotions, mémoire, scores, récompenses symboliques.
+    \item \textbf{Communication} : Tableaux de pictogrammes, demandes de l'enfant, historique.
+    \item \textbf{Événements} : Ateliers, inscriptions, gestion des places.
+    \item \textbf{Ressources} : Fiches, vidéos, recherche par catégorie et niveau.
+\end{itemize}
+
+% ==========================================
+% 3. ARCHITECTURE GLOBALE ET TECHNOLOGIES
+% ==========================================
+\chapter{Architecture Globale et Choix Techniques}
+
+\section{Vue d'ensemble}
+L'architecture repose sur une approche microservices conteneurisés (Docker Compose). Elle est sécurisée par Keycloak (JWT) et utilise une API Gateway pour router les requêtes.
+
+\begin{figure}[H]
+    \centering
+    % TODO: Remplacer 'architecture_globale.png' par le nom de votre image téléversée
+    % \includegraphics[width=\textwidth]{architecture_globale.png}
+    \caption{Vue d'ensemble de l'architecture microservices d'AutismCare}
+    \label{fig:archi_globale}
+\end{figure}
+
+\section{Choix Techniques}
+\begin{itemize}
+    \item \textbf{Frontend} : Angular
+    \item \textbf{API Gateway} : Spring Cloud Gateway (port 8090)
+    \item \textbf{Découverte de services} : Eureka Server (port 8761)
+    \item \textbf{Sécurité} : Keycloak (port 8180) avec validation des tokens JWT
+    \item \textbf{Communication Synchrone} : OpenFeign (entre microservices Spring Boot)
+    \item \textbf{Communication Asynchrone} : RabbitMQ (port 5672) pour les événements métier
+    \item \textbf{Bases de données} : PostgreSQL et MongoDB (1 base par microservice)
+\end{itemize}
+
+% ==========================================
+% 4. DÉCOUPAGE EN MICROSERVICES
+% ==========================================
+\chapter{Découpage en Microservices}
+
+Chaque microservice est autonome et gère sa propre base de données.
+% Insert image
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{archG.png}
+    \caption{Architecture des microservices}
+    \label{fig:architecture}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\small % <-- AJOUT POUR CORRIGER LE WARNING (Réduit la taille du texte)
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|l|X|l|l|}
+\hline
+\textbf{Service} & \textbf{Responsable} & \textbf{Responsabilités} & \textbf{Techno / Port} & \textbf{Base} \\ \hline
+schedule-service (commun) & Toute l'équipe & Emploi du temps visuel, activités, rappels & Node.js : 3000 & PostgreSQL \\ \hline
+consultation-service & Molka & Spécialistes, rendez-vous, notes de suivi & Spring Boot : 8084 & PostgreSQL \\ \hline
+course-eval-service & Dora & Cours, exercices, évaluations, compétences & Spring Boot : 8082 & MongoDB \\ \hline
+game-service & Rouem & Jeux, niveaux, scores, récompenses & Spring Boot : 8085 & MongoDB \\ \hline
+event-service & Fares & Événements, inscriptions, places & Spring Boot : 8081 & PostgreSQL \\ \hline
+communication-service & Zakaria & Pictogrammes, tableaux, demandes & Spring Boot : 8087 & MongoDB \\ \hline
+resource-service & Ahmed & Ressources pédagogiques, médias, recherche & Spring Boot : 8086 & MongoDB \\ \hline
+\end{tabularx}
+\caption{Répartition des microservices et responsabilités}
+\end{table}
+
+% ==========================================
+% 5. CONCEPTION DES MICROSERVICES (DIAGRAMMES)
+% ==========================================
+\chapter{Conception des Microservices (Diagrammes de Classes)}
+
+% --- Exemple pour le schedule-service ---
+\section{Microservice Commun : schedule-service}
+\textit{Responsable de la présentation : [Nom de l'étudiant]} \\
+Ce service gère la planification des activités de l'enfant.
+
+\begin{figure}[H]
+    \centering
+    % TODO: Insérer le diagramme de classe UML du schedule-service ici
+    % \includegraphics[width=0.8\textwidth]{uml_schedule.png}
+    \caption{Diagramme de classes - Schedule Service}
+\end{figure}
+
+% --- Exemple pour le consultation-service ---
+\section{Microservice : consultation-service}
+\textit{Responsable : Molka} \\
+Ce service gère les rendez-vous avec les spécialistes et les notes de suivi.
+
+\begin{figure}[H]
+    \centering
+    % TODO: Insérer le diagramme de classe UML du consultation-service ici
+    % \includegraphics[width=0.8\textwidth]{uml_consultation.png}
+    \caption{Diagramme de classes - Consultation Service}
+\end{figure}
+
+% ==========================================
+% 6. CONTRATS D'API ET COMMUNICATIONS
+% ==========================================
+\chapter{Contrats d'API et Communications}
+
+\section{Communications Inter-services}
+L'architecture utilise deux modes de communication :
+\begin{itemize}
+    \item \textbf{OpenFeign (Synchrone)} : Par exemple, le service \texttt{course-eval-service} appelle \texttt{resource-service} pour récupérer un média (\texttt{GET /api/resources/\{id\}}).
+    \item \textbf{RabbitMQ (Asynchrone)} : Par exemple, le \texttt{consultation-service} publie l'événement \texttt{ConsultationConfirmed}, qui est consommé par le \texttt{schedule-service} pour ajouter automatiquement le RDV au planning.
+\end{itemize}
+
+\section{Contrats d'API (Principaux Endpoints)}
+
+\subsection{Schedule Service (\texttt{/api/schedule})}
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|l|l|X|l|}
+\hline
+\textbf{Méthode} & \textbf{Endpoint} & \textbf{Rôle} & \textbf{Codes} \\ \hline
+GET & \texttt{/\{childId\}?view=week} & Planning de la semaine & 200, 403, 404 \\ \hline
+POST & \texttt{/\{childId\}/activities} & Ajouter une activité & 201, 400, 409 \\ \hline
+PUT & \texttt{/activities/\{id\}} & Modifier une activité & 200, 404, 409 \\ \hline
+PATCH & \texttt{/activities/\{id\}/status} & Changer le statut (fait/non fait) & 200, 400, 404 \\ \hline
+DELETE & \texttt{/activities/\{id\}} & Supprimer une activité & 204, 404 \\ \hline
+\end{tabularx}
+\end{table}
+
+\subsection{Consultation Service (\texttt{/api/consultations})}
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|l|l|X|l|}
+\hline
+\textbf{Méthode} & \textbf{Endpoint} & \textbf{Rôle} & \textbf{Codes} \\ \hline
+GET & \texttt{/specialists} & Liste des spécialistes & 200, 400 \\ \hline
+POST & \texttt{/appointments} & Prendre un rendez-vous & 201, 400, 403, 404, 409 \\ \hline
+GET & \texttt{/appointments?childId=} & Historique d'un enfant & 200, 403 \\ \hline
+PATCH & \texttt{/appointments/\{id\}/status} & Confirmer / terminer / annuler & 200, 403, 404, 409 \\ \hline
+POST & \texttt{/appointments/\{id\}/notes} & Ajouter une note de suivi & 201, 403, 404 \\ \hline
+\end{tabularx}
+\end{table}
+
+\subsection{Course Service (\texttt{/api/courses})}
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|l|l|X|l|}
+\hline
+\textbf{Méthode} & \textbf{Endpoint} & \textbf{Rôle} & \textbf{Codes} \\ \hline
+GET & \texttt{?categorie=\&niveau=\&age=} & Liste filtrée et paginée & 200, 400 \\ \hline
+POST & \texttt{/} & Créer un cours & 201, 400, 401, 403, 404 \\ \hline
+POST & \texttt{/\{id\}/contents} & Ajouter un contenu (image, vidéo) & 201, 400, 403, 413, 415 \\ \hline
+POST & \texttt{/\{id\}/assignments} & Affecter le cours à des enfants & 201, 400, 403, 404, 409, 422 \\ \hline
+\end{tabularx}
+\end{table}
+
+% ==========================================
+% 7. GESTION DE PROJET
+% ==========================================
+\chapter{Gestion de Projet}
+
+\section{Organisation du dépôt Git}
+Le dépôt Git suit la structure imposée par l'enseignant :
+\begin{lstlisting}
+autismCare-4ssa13/
+|-- Backend/             # Code source des microservices (Spring Boot, Node.js)
+|-- Frontend/            # Application Angular
+|-- Documentation/
+|   |-- Presentation/    # Diapositives de la seance 4
+|   |-- Diagrams/        # Diagrammes UML et d'architecture
+|-- README.md
+\end{lstlisting}
+
+\section{Repartition des taches}
+\begin{itemize}
+    \item \textbf{Molka} : Consultation-service et Integration Keycloak
+    \item \textbf{Dora} : Course-eval-service et API Gateway
+    \item \textbf{Rouem} : Game-service et Base de donnees MongoDB
+    \item \textbf{Fares} : Event-service et RabbitMQ
+    \item \textbf{Zakaria} : Communication-service et Frontend Angular
+    \item \textbf{Ahmed} : Resource-service et Configuration Eureka
+    \item \textbf{Toute l'equipe} : Schedule-service (microservice commun), Documentation
+\end{itemize}
+
+\section{Planning et Risques}
+\begin{itemize}
+    \item \textbf{Planning} : 
+    \begin{itemize}
+        \item Semaine 1-2 : Conception UML et contrats d'API.
+        \item Semaine 3-4 : Developpement des microservices backend.
+        \item Semaine 5 : Developpement Frontend Angular et integration.
+        \item Semaine 6 : Tests de communication (Feign/RabbitMQ) et finalisation.
+    \end{itemize}
+    \item \textbf{Risques principaux} : 
+    \begin{itemize}
+        \item \textit{Complexite de l'integration RabbitMQ} : Risque de perte de messages. Mitigation : Mise en place de files d'attente persistantes.
+        \item \textit{Gestion du temps} : Retard sur le frontend. Mitigation : Utilisation de maquettes UI/UX validees tres tot.
+    \end{itemize}
+\end{itemize}
+
+\end{document}

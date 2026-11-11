@@ -163,6 +163,43 @@ Calendrier des événements communautaires et gestion des inscriptions.
 
 > (Note : Le code 409 est retourné si l'événement est complet).
 
+**Exemple : Créer un événement (`POST /api/events/`)**
+```json
+// Request Body
+{
+  "title": "Atelier dessin thérapeutique",
+  "description": "Atelier créatif pour enfants autistes",
+  "startAt": "2023-12-01T14:00:00",
+  "durationMin": 60,
+  "location": "Centre AutismCare, Paris",
+  "maxParticipants": 12
+}
+
+// Response 201 Created
+{
+  "eventId": "evt-98765",
+  "title": "Atelier dessin thérapeutique",
+  "status": "PUBLISHED",
+  "registrationsCount": 0
+}
+```
+
+**Exemple : S'inscrire à un événement (`POST /api/events/evt-98765/registrations`)**
+```json
+// Request Body
+{
+  "userId": "parent456",
+  "childId": "child123"
+}
+
+// Response 201 Created
+{
+  "registrationId": 301,
+  "eventId": "evt-98765",
+  "status": "CONFIRMED"
+}
+```
+
 ## 6. Communication Service
 **Base URL :** `/api`
 

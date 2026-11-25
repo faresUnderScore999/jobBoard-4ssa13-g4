@@ -19,8 +19,7 @@
 [INFO] skip non existing resourceDirectory /home/yamaha/Desktop/jobBoard-4ssa13-g4/Backend/eureka-server/src/test/resources
 [INFO] 
 [INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ eureka-server ---
-[INFO] Recompiling the module because of changed dependency.
-[INFO] Compiling 1 source file with javac [debug parameters release 25] to target/test-classes
+[INFO] Nothing to compile - all classes are up to date.
 [INFO] 
 [INFO] <<< spring-boot:4.2.0:run (default-cli) < test-compile @ eureka-server <<<
 [INFO] 
@@ -37,38 +36,38 @@
 
  :: Spring Boot ::                (v4.2.0)
 
-2026-11-26T00:20:31.847+01:00  INFO 2224680 --- [eureka-server] [           main] c.e.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 25.0.4.1 with PID 2224680 (/home/yamaha/Desktop/jobBoard-4ssa13-g4/Backend/eureka-server/target/classes started by yamaha in /home/yamaha/Desktop/jobBoard-4ssa13-g4/Backend/eureka-server)
-2026-11-26T00:20:31.850+01:00  INFO 2224680 --- [eureka-server] [           main] c.e.e.EurekaServerApplication            : The following 1 profile is active: "peer1"
-2026-11-26T00:20:32.700+01:00  INFO 2224680 --- [eureka-server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58529f26-af9c-34a8-a01a-af23324a7bfb
-2026-11-26T00:20:33.059+01:00  INFO 2224680 --- [eureka-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8761 (http)
-2026-11-26T00:20:33.075+01:00  INFO 2224680 --- [eureka-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-11-26T00:20:33.076+01:00  INFO 2224680 --- [eureka-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
-2026-11-26T00:20:33.129+01:00  INFO 2224680 --- [eureka-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1229 ms
-2026-11-26T00:20:33.819+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2026-11-26T00:20:33.819+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-11-26T00:54:27.961+01:00  INFO 2303355 --- [eureka-server] [           main] c.e.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 25.0.4.1 with PID 2303355 (/home/yamaha/Desktop/jobBoard-4ssa13-g4/Backend/eureka-server/target/classes started by yamaha in /home/yamaha/Desktop/jobBoard-4ssa13-g4/Backend/eureka-server)
+2026-11-26T00:54:27.963+01:00  INFO 2303355 --- [eureka-server] [           main] c.e.e.EurekaServerApplication            : The following 1 profile is active: "peer1"
+2026-11-26T00:54:28.858+01:00  INFO 2303355 --- [eureka-server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58529f26-af9c-34a8-a01a-af23324a7bfb
+2026-11-26T00:54:29.105+01:00  INFO 2303355 --- [eureka-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8761 (http)
+2026-11-26T00:54:29.117+01:00  INFO 2303355 --- [eureka-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-26T00:54:29.118+01:00  INFO 2303355 --- [eureka-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-26T00:54:29.160+01:00  INFO 2303355 --- [eureka-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1150 ms
+2026-11-26T00:54:29.901+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-11-26T00:54:29.902+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
 WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider (file:/home/yamaha/.m2/repository/com/thoughtworks/xstream/xstream/1.4.21/xstream-1.4.21.jar)
 WARNING: Please consider reporting this to the maintainers of class com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider
 WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
-2026-11-26T00:20:33.991+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2026-11-26T00:20:33.991+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2026-11-26T00:20:34.144+01:00  INFO 2224680 --- [eureka-server] [           main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2026-11-26T00:20:34.628+01:00  WARN 2224680 --- [eureka-server] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-11-26T00:20:34.645+01:00  INFO 2224680 --- [eureka-server] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-11-26T00:20:34.659+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-11-26T00:20:34.668+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2026-11-26T00:20:34.668+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2026-11-26T00:20:34.668+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2026-11-26T00:20:34.668+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2026-11-26T00:20:34.675+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-11-26T00:20:34.681+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-11-26T00:20:34.681+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-11-26T00:20:34.681+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-11-26T00:20:34.681+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-11-26T00:20:34.681+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-11-26T00:20:34.681+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-11-26T00:20:34.681+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-11-26T00:20:34.757+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8762/eureka/}, exception=java.net.ConnectException: Connection refused (connect failed)
+2026-11-26T00:54:30.087+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-11-26T00:54:30.087+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-11-26T00:54:30.248+01:00  INFO 2303355 --- [eureka-server] [           main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-11-26T00:54:30.766+01:00  WARN 2303355 --- [eureka-server] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-26T00:54:30.784+01:00  INFO 2303355 --- [eureka-server] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-26T00:54:30.808+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-26T00:54:30.816+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-11-26T00:54:30.816+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-11-26T00:54:30.816+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-11-26T00:54:30.816+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-11-26T00:54:30.824+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-26T00:54:30.829+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-26T00:54:30.830+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-26T00:54:30.830+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-26T00:54:30.830+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-26T00:54:30.830+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-26T00:54:30.830+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-26T00:54:30.830+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-26T00:54:30.893+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8762/eureka/}, exception=java.net.ConnectException: Connection refused (connect failed)
 
 jakarta.ws.rs.ProcessingException: java.net.ConnectException: Connection refused (connect failed)
 	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:278) ~[jersey-client-4.0.3.jar:na]
@@ -204,8 +203,8 @@ Caused by: java.net.ConnectException: Connection refused (connect failed)
 	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:276) ~[jersey-client-4.0.3.jar:na]
 	... 109 common frames omitted
 
-2026-11-26T00:20:34.762+01:00  WARN 2224680 --- [eureka-server] [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused (connect failed)
-2026-11-26T00:20:34.762+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server
+2026-11-26T00:54:30.897+01:00  WARN 2303355 --- [eureka-server] [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused (connect failed)
+2026-11-26T00:54:30.897+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
@@ -296,30 +295,30 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-4.2.0.jar:4.2.0]
 	at com.example.eureka_server.EurekaServerApplication.main(EurekaServerApplication.java:12) ~[classes/:na]
 
-2026-11-26T00:20:34.763+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2026-11-26T00:20:34.764+01:00  WARN 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2026-11-26T00:20:34.764+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2026-11-26T00:20:34.765+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-11-26T00:20:34.766+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-11-26T00:20:34.768+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1795648834767 with initial instances count: 0
-2026-11-26T00:20:34.800+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2026-11-26T00:20:34.801+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://127.0.0.1:8762/eureka/]
-2026-11-26T00:20:34.878+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2026-11-26T00:20:34.878+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2026-11-26T00:20:34.878+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2026-11-26T00:20:34.878+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2026-11-26T00:20:34.895+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://127.0.0.1:8762/eureka/
-2026-11-26T00:20:34.902+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2026-11-26T00:20:34.902+01:00  INFO 2224680 --- [eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2026-11-26T00:20:34.912+01:00  INFO 2224680 --- [eureka-server] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-11-26T00:20:34.953+01:00  INFO 2224680 --- [eureka-server] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKA-SERVER with eureka with status UP
-2026-11-26T00:20:34.954+01:00  INFO 2224680 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1795648834954, current=UP, previous=STARTING]
-2026-11-26T00:20:34.955+01:00  INFO 2224680 --- [eureka-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761: registering service...
-2026-11-26T00:20:34.963+01:00  INFO 2224680 --- [eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2026-11-26T00:20:34.963+01:00  INFO 2224680 --- [eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2026-11-26T00:20:34.965+01:00  INFO 2224680 --- [eureka-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8761 (http) with context path '/'
-2026-11-26T00:20:34.966+01:00  INFO 2224680 --- [eureka-server] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
-2026-11-26T00:20:34.971+01:00  INFO 2224680 --- [eureka-server] [foReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8762/eureka/}, exception=java.net.ConnectException: Connection refused (connect failed)
+2026-11-26T00:54:30.898+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2026-11-26T00:54:30.898+01:00  WARN 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2026-11-26T00:54:30.899+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2026-11-26T00:54:30.899+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-26T00:54:30.901+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-26T00:54:30.902+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1795650870901 with initial instances count: 0
+2026-11-26T00:54:30.928+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2026-11-26T00:54:30.929+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://127.0.0.1:8762/eureka/]
+2026-11-26T00:54:30.999+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-11-26T00:54:30.999+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-11-26T00:54:30.999+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-11-26T00:54:30.999+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-11-26T00:54:31.015+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://127.0.0.1:8762/eureka/
+2026-11-26T00:54:31.021+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2026-11-26T00:54:31.021+01:00  INFO 2303355 --- [eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2026-11-26T00:54:31.030+01:00  INFO 2303355 --- [eureka-server] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-26T00:54:31.075+01:00  INFO 2303355 --- [eureka-server] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKA-SERVER with eureka with status UP
+2026-11-26T00:54:31.076+01:00  INFO 2303355 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1795650871076, current=UP, previous=STARTING]
+2026-11-26T00:54:31.077+01:00  INFO 2303355 --- [eureka-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761: registering service...
+2026-11-26T00:54:31.085+01:00  INFO 2303355 --- [eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2026-11-26T00:54:31.085+01:00  INFO 2303355 --- [eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2026-11-26T00:54:31.088+01:00  INFO 2303355 --- [eureka-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8761 (http) with context path '/'
+2026-11-26T00:54:31.089+01:00  INFO 2303355 --- [eureka-server] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2026-11-26T00:54:31.095+01:00  INFO 2303355 --- [eureka-server] [foReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8762/eureka/}, exception=java.net.ConnectException: Connection refused (connect failed)
 
 jakarta.ws.rs.ProcessingException: java.net.ConnectException: Connection refused (connect failed)
 	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:278) ~[jersey-client-4.0.3.jar:na]
@@ -382,8 +381,8 @@ Caused by: java.net.ConnectException: Connection refused (connect failed)
 	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:276) ~[jersey-client-4.0.3.jar:na]
 	... 35 common frames omitted
 
-2026-11-26T00:20:34.972+01:00  WARN 2224680 --- [eureka-server] [foReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused (connect failed)
-2026-11-26T00:20:34.972+01:00  WARN 2224680 --- [eureka-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761 - registration failed Cannot execute request on any known server
+2026-11-26T00:54:31.096+01:00  WARN 2303355 --- [eureka-server] [foReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused (connect failed)
+2026-11-26T00:54:31.096+01:00  WARN 2303355 --- [eureka-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
@@ -401,7 +400,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
 
-2026-11-26T00:20:34.973+01:00  WARN 2224680 --- [eureka-server] [foReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2026-11-26T00:54:31.096+01:00  WARN 2303355 --- [eureka-server] [foReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
@@ -419,23 +418,23 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
 
-2026-11-26T00:20:34.975+01:00  INFO 2224680 --- [eureka-server] [           main] c.e.e.EurekaServerApplication            : Started EurekaServerApplication in 3.548 seconds (process running for 3.982)
-2026-11-26T00:20:41.679+01:00  INFO 2224680 --- [eureka-server] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-11-26T00:20:41.679+01:00  INFO 2224680 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-11-26T00:20:41.681+01:00  INFO 2224680 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-11-26T00:20:42.139+01:00  INFO 2224680 --- [eureka-server] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EUREKA-SERVER/10.196.74.202:eureka-server:8762 with status UP (replication=false)
-2026-11-26T00:20:49.364+01:00  INFO 2224680 --- [eureka-server] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GAME-SERVICE/10.196.74.202:game-service:0 with status UP (replication=true)
-2026-11-26T00:20:55.605+01:00  INFO 2224680 --- [eureka-server] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVENT-SERVER/10.196.74.202:event-server:0 with status UP (replication=false)
-2026-11-26T00:21:02.280+01:00  INFO 2224680 --- [eureka-server] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONSULTATION-SERVICE/consultation-service:58282a2393bd9be68e945ce34b8fc83c with status DOWN (replication=true)
-2026-11-26T00:21:04.765+01:00  INFO 2224680 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-11-26T00:21:04.765+01:00  INFO 2224680 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-11-26T00:21:04.765+01:00  INFO 2224680 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-11-26T00:21:04.765+01:00  INFO 2224680 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-11-26T00:21:04.765+01:00  INFO 2224680 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-11-26T00:21:04.765+01:00  INFO 2224680 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-11-26T00:21:04.765+01:00  INFO 2224680 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-11-26T00:21:04.778+01:00  INFO 2224680 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-11-26T00:21:04.830+01:00  INFO 2224680 --- [eureka-server] [beatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8762/eureka/}, exception=HTTP 400 Bad Request
+2026-11-26T00:54:31.102+01:00  INFO 2303355 --- [eureka-server] [           main] c.e.e.EurekaServerApplication            : Started EurekaServerApplication in 3.533 seconds (process running for 4.019)
+2026-11-26T00:54:31.949+01:00  INFO 2303355 --- [eureka-server] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-26T00:54:31.950+01:00  INFO 2303355 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-26T00:54:31.953+01:00  INFO 2303355 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-11-26T00:54:38.351+01:00  INFO 2303355 --- [eureka-server] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EUREKA-SERVER/10.196.74.202:eureka-server:8762 with status UP (replication=false)
+2026-11-26T00:54:45.634+01:00  INFO 2303355 --- [eureka-server] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GAME-SERVICE/10.196.74.202:game-service:0 with status UP (replication=false)
+2026-11-26T00:54:56.789+01:00  INFO 2303355 --- [eureka-server] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVENT-SERVER/10.196.74.202:event-server:0 with status UP (replication=true)
+2026-11-26T00:54:58.476+01:00  INFO 2303355 --- [eureka-server] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONSULTATION-SERVICE/consultation-service:524e96e55b0815e5e5eeb32c7bc24169 with status DOWN (replication=true)
+2026-11-26T00:55:00.900+01:00  INFO 2303355 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-26T00:55:00.900+01:00  INFO 2303355 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-26T00:55:00.900+01:00  INFO 2303355 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-26T00:55:00.900+01:00  INFO 2303355 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-26T00:55:00.900+01:00  INFO 2303355 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-26T00:55:00.900+01:00  INFO 2303355 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-26T00:55:00.900+01:00  INFO 2303355 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-26T00:55:00.910+01:00  INFO 2303355 --- [eureka-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-26T00:55:00.968+01:00  INFO 2303355 --- [eureka-server] [beatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8762/eureka/}, exception=HTTP 400 Bad Request
 
 jakarta.ws.rs.WebApplicationException: HTTP 400 Bad Request
 	at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-2.0.6.jar:2.0.6]
@@ -490,8 +489,8 @@ Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Root nam
 	at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:103) ~[eureka-client-2.0.6.jar:2.0.6]
 	... 37 common frames omitted
 
-2026-11-26T00:21:04.831+01:00  WARN 2224680 --- [eureka-server] [beatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: HTTP 400 Bad Request
-2026-11-26T00:21:04.831+01:00 ERROR 2224680 --- [eureka-server] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761 - was unable to send heartbeat!
+2026-11-26T00:55:00.969+01:00  WARN 2303355 --- [eureka-server] [beatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: HTTP 400 Bad Request
+2026-11-26T00:55:00.969+01:00 ERROR 2303355 --- [eureka-server] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761 - was unable to send heartbeat!
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
@@ -507,15 +506,15 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
 
-2026-11-26T00:21:04.964+01:00  INFO 2224680 --- [eureka-server] [       Thread-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EUREKA-SERVER/10.196.74.202:eureka-server:8762 with status UP (replication=true)
-2026-11-26T00:21:04.964+01:00  INFO 2224680 --- [eureka-server] [       Thread-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GAME-SERVICE/10.196.74.202:game-service:0 with status UP (replication=true)
-2026-11-26T00:21:04.965+01:00  INFO 2224680 --- [eureka-server] [       Thread-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVENT-SERVER/10.196.74.202:event-server:0 with status UP (replication=true)
-2026-11-26T00:21:04.965+01:00  INFO 2224680 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 3 instances from neighboring DS node
-2026-11-26T00:21:04.965+01:00  INFO 2224680 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 5
-2026-11-26T00:21:04.965+01:00  INFO 2224680 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2026-11-26T00:21:04.966+01:00  INFO 2224680 --- [eureka-server] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2026-11-26T00:21:04.973+01:00  INFO 2224680 --- [eureka-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761: registering service...
-2026-11-26T00:21:04.980+01:00  INFO 2224680 --- [eureka-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761 - registration status: 204
-2026-11-26T00:21:05.490+01:00  INFO 2224680 --- [eureka-server] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EUREKA-SERVER/10.196.74.202:eureka-server:8761 with status UP (replication=true)
-2026-11-26T00:21:32.229+01:00  INFO 2224680 --- [eureka-server] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONSULTATION-SERVICE/consultation-service:58282a2393bd9be68e945ce34b8fc83c with status UP (replication=true)
-2026-11-26T00:22:04.966+01:00  INFO 2224680 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-11-26T00:55:01.086+01:00  INFO 2303355 --- [eureka-server] [       Thread-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EUREKA-SERVER/10.196.74.202:eureka-server:8762 with status UP (replication=true)
+2026-11-26T00:55:01.087+01:00  INFO 2303355 --- [eureka-server] [       Thread-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GAME-SERVICE/10.196.74.202:game-service:0 with status UP (replication=true)
+2026-11-26T00:55:01.087+01:00  INFO 2303355 --- [eureka-server] [       Thread-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVENT-SERVER/10.196.74.202:event-server:0 with status UP (replication=true)
+2026-11-26T00:55:01.087+01:00  INFO 2303355 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 3 instances from neighboring DS node
+2026-11-26T00:55:01.087+01:00  INFO 2303355 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 5
+2026-11-26T00:55:01.087+01:00  INFO 2303355 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2026-11-26T00:55:01.088+01:00  INFO 2303355 --- [eureka-server] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2026-11-26T00:55:01.097+01:00  INFO 2303355 --- [eureka-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761: registering service...
+2026-11-26T00:55:01.103+01:00  INFO 2303355 --- [eureka-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKA-SERVER/10.196.74.202:eureka-server:8761 - registration status: 204
+2026-11-26T00:55:01.613+01:00  INFO 2303355 --- [eureka-server] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EUREKA-SERVER/10.196.74.202:eureka-server:8761 with status UP (replication=true)
+2026-11-26T00:55:28.425+01:00  INFO 2303355 --- [eureka-server] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONSULTATION-SERVICE/consultation-service:524e96e55b0815e5e5eeb32c7bc24169 with status UP (replication=true)
+2026-11-26T00:56:01.088+01:00  INFO 2303355 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms

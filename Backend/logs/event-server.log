@@ -1,0 +1,77 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24636 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] ----------------------< com.example:event-server >----------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.2.0:run (default-cli) > test-compile @ event-server >>>
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ event-server ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ event-server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ event-server ---
+[INFO] skip non existing resourceDirectory /home/yamaha/Desktop/jobBoard-4ssa13-g4/Backend/event-server/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ event-server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.2.0:run (default-cli) < test-compile @ event-server <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.2.0:run (default-cli) @ event-server ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.2.0)
+
+2026-11-26T00:20:51.681+01:00  INFO 2226062 --- [event-server] [           main] c.e.event_server.EventServerApplication  : Starting EventServerApplication using Java 25.0.4.1 with PID 2226062 (/home/yamaha/Desktop/jobBoard-4ssa13-g4/Backend/event-server/target/classes started by yamaha in /home/yamaha/Desktop/jobBoard-4ssa13-g4/Backend/event-server)
+2026-11-26T00:20:51.684+01:00  INFO 2226062 --- [event-server] [           main] c.e.event_server.EventServerApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-11-26T00:20:52.720+01:00  INFO 2226062 --- [event-server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bff7b623-62c6-377b-ae21-5c7797ec2098
+2026-11-26T00:20:53.162+01:00  INFO 2226062 --- [event-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-11-26T00:20:53.184+01:00  INFO 2226062 --- [event-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-26T00:20:53.185+01:00  INFO 2226062 --- [event-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-26T00:20:53.253+01:00  INFO 2226062 --- [event-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1519 ms
+2026-11-26T00:20:54.574+01:00  INFO 2226062 --- [event-server] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-11-26T00:20:54.630+01:00  WARN 2226062 --- [event-server] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-26T00:20:54.652+01:00  INFO 2226062 --- [event-server] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-26T00:20:54.760+01:00  INFO 2226062 --- [event-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 36777 (http) with context path '/'
+2026-11-26T00:20:54.763+01:00  INFO 2226062 --- [event-server] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 36777
+2026-11-26T00:20:54.772+01:00  INFO 2226062 --- [event-server] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-26T00:20:54.804+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-26T00:20:54.808+01:00  INFO 2226062 --- [event-server] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-26T00:20:54.827+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-26T00:20:54.828+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-26T00:20:54.829+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-26T00:20:54.829+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-26T00:20:54.829+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-26T00:20:54.829+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-26T00:20:54.830+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-26T00:20:55.523+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-26T00:20:55.526+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-26T00:20:55.529+01:00  INFO 2226062 --- [event-server] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-26T00:20:55.532+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1795648855531 with initial instances count: 0
+2026-11-26T00:20:55.537+01:00  INFO 2226062 --- [event-server] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EVENT-SERVER with eureka with status UP
+2026-11-26T00:20:55.538+01:00  INFO 2226062 --- [event-server] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1795648855538, current=UP, previous=STARTING]
+2026-11-26T00:20:55.541+01:00  INFO 2226062 --- [event-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EVENT-SERVER/10.196.74.202:event-server:0: registering service...
+2026-11-26T00:20:55.558+01:00  INFO 2226062 --- [event-server] [           main] c.e.event_server.EventServerApplication  : Started EventServerApplication in 4.359 seconds (process running for 4.94)
+2026-11-26T00:20:55.608+01:00  INFO 2226062 --- [event-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EVENT-SERVER/10.196.74.202:event-server:0 - registration status: 204
+2026-11-26T00:21:25.526+01:00  INFO 2226062 --- [event-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-26T00:21:25.527+01:00  INFO 2226062 --- [event-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-26T00:21:25.527+01:00  INFO 2226062 --- [event-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-26T00:21:25.527+01:00  INFO 2226062 --- [event-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-26T00:21:25.527+01:00  INFO 2226062 --- [event-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-26T00:21:25.527+01:00  INFO 2226062 --- [event-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-11-26T00:21:25.527+01:00  INFO 2226062 --- [event-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-26T00:21:25.544+01:00  INFO 2226062 --- [event-server] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200

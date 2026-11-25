@@ -58,3 +58,11 @@ Gestion des ressources et documents partagés.
 Bibliothèque de pictogrammes pour la communication des enfants autistes.
 
 Responsabilités : bibliothèque de pictogrammes par catégorie (besoins, émotions, nourriture, activités, lieux) ; tableaux personnalisables par enfant gérés par les parents et éducateurs ; construction de demandes ou de choix par l'enfant en tapant sur des pictogrammes (ex. « Je veux + eau ») ; historique des requêtes de l'enfant visible aux parents et éducateurs ; pictogrammes favoris et fréquemment utilisés.
+
+
+cd /home/yamaha/Desktop/jobBoard-4ssa13-g4
+chmod +x Backend/start-backend.sh
+./Backend/start-backend.sh
+# in another terminal, watch logs:
+tail -f Backend/logs/eureka-peer1.log
+tail -f Backend/logs/game-server.log

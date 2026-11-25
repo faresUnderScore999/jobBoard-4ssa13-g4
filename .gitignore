@@ -1,0 +1,15 @@
+# Maven build output
+target/
+*.class
+
+# Maven wrapper download cache
+.m2/wrapper/dists/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,32 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: resource-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/resource_db
+
+eureka:
+  client:
+    enabled: false   # temporaire : on l'activera quand le serveur Eureka tournera
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,env,beans,mappings,loggers,httpexchanges
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: resource-service
+    description: Gestion des ressources pédagogiques AutismCare
+    author: Ahmed Laribi
+    team: 4ssa13
